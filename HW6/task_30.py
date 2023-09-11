@@ -19,5 +19,4 @@ if __name__ == "__main__":
     a_1 = int(input("Введите первый элемент прогрессии: "))
     d = int(input("Введите разность элементов прогрессии: "))
     n = int(input("Введите количество элементов прогрессии: "))
-    progression = get_progression_list(a_1, d, n)
-    print("Элементы арифметической прогрессии:", *progression)
+    print("Элементы арифметической прогрессии:", *get_progression_list(a_1, d, n))

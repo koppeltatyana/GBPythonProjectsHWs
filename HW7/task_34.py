@@ -11,8 +11,8 @@
 
 def get_string_vowels(text: str) -> int:
     vowels = ['а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е']
-    vowels_count = list(filter(lambda x: x in vowels, text))
-    return len(vowels_count)
+    text_vowels = list(filter(lambda x: x in vowels, text))
+    return len(text_vowels)
 
 if __name__ == "__main__":
     text = input('Винни, введи текст кричалки: ')

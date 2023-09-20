@@ -34,7 +34,7 @@ class DataWriter:
                 user_for_search['lastname'].lower() in x.split()[1].lower() and
                 user_for_search['middlename'].lower() in x.split()[2].lower() and
                 user_for_search['phone'].lower() in x.split()[3].lower() and
-                user_for_search['address'].lower() in ' '.join(x.split()[4:]).lower(),
+                user_for_search['city'].lower() in ' '.join(x.split()[4:]).lower(),
                 users
             )
         )
@@ -67,14 +67,14 @@ class DataWriter:
                 lastname=item.split()[1],
                 middlename=item.split()[2],
                 phone=item.split()[3],
-                address=' '.join(item.split()[4:]),
+                city=' '.join(item.split()[4:]),
             )
         data += DataCreate.create_data_string(
             firstname=new_user_data['firstname'],
             lastname=new_user_data['lastname'],
             middlename=new_user_data['middlename'],
             phone=new_user_data['phone'],
-            address=new_user_data['address'],
+            city=new_user_data['city'],
         )
         print(f'\nБудет изменен пользователь:', *result)
         self.write_data(file_name=file_name, text=data, write_mode='w')
@@ -96,7 +96,7 @@ class DataWriter:
                 user_data_for_deleting['lastname'].lower() in x.split()[1].lower() and
                 user_data_for_deleting['middlename'].lower() in x.split()[2].lower() and
                 user_data_for_deleting['phone'].lower() in x.split()[3].lower() and
-                user_data_for_deleting['address'].lower() in ' '.join(x.split()[4:]).lower(),
+                user_data_for_deleting['city'].lower() in ' '.join(x.split()[4:]).lower(),
                 users
             )
         )
@@ -126,7 +126,7 @@ class DataWriter:
                 lastname=item.split()[1],
                 middlename=item.split()[2],
                 phone=item.split()[3],
-                address=' '.join(item.split()[4:]),
+                city=' '.join(item.split()[4:]),
             )
-        print(f'\nБудет удален пользователь:', *result)
+        print(f'\nБудет удален пользователь:', *result, sep='\n')
         self.write_data(file_name=file_name, text=data, write_mode='w')

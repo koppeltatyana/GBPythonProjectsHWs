@@ -30,7 +30,7 @@ class DataPrinter:
                 user_for_search['lastname'].lower() in x.split()[1].lower() and
                 user_for_search['middlename'].lower() in x.split()[2].lower() and
                 user_for_search['phone'].lower() in x.split()[3].lower() and
-                user_for_search['address'].lower() in ''.join(x.split()[4].lower()),
+                user_for_search['city'].lower() in ''.join(x.split()[4].lower()),
                 users
             )
         )
@@ -39,4 +39,4 @@ class DataPrinter:
             print(f'\nУказанные пользовательские данные не дали результатов\n')
         else:
             print(f'\nРезультат поиска:')
-            print(*result, end='\n\n')
+            print(*result, sep='\n', end='\n\n')

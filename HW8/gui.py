@@ -22,14 +22,14 @@ class Interface:
                         lastname=data_create.data_input(data_create.lastname_prefix),
                         middlename=data_create.data_input(data_create.middlename_prefix),
                         phone=data_create.data_input(data_create.phone_prefix),
-                        address=data_create.data_input(data_create.address_prefix),
+                        city=data_create.data_input(data_create.city_prefix),
                     )
                     DataWriter.write_data(file_name=self.FILE_NAME, text=user_data)
                 case 2:
                     DataPrinter.print_data(file_name=self.FILE_NAME)
 
                 case 3:
-                    print('Введите данные пользователя, которого необходимо найти '
+                    print('\nВведите данные пользователя, которого необходимо найти '
                           '(можете ничего не вводить, тогда по этому полю не будет производиться поиск пользователей)')
                     DataPrinter.print_searched_data(
                         file_name=self.FILE_NAME,

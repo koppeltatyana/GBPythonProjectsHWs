@@ -77,7 +77,7 @@ class DataCreate:
         :param lastname: Фамилия пользователя
         :param middlename: Отчество пользователя
         :param phone: Телефон пользователя
-        :param city: Адрес пользователя
-        :return: Строка (Имя Фамилия Отчество\nТелефон\nАдрес)
+        :param city: Город пользователя
+        :return: Строка (Имя Фамилия Отчество\nТелефон\nГород)
         """
         return f'{firstname} {lastname} {middlename}\n{phone}\n{city}\n\n'

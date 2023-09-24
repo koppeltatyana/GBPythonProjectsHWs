@@ -1,4 +1,4 @@
-from HW8.data_create import DataCreate
+from data_create import DataCreate
 
 
 class DataWriter:

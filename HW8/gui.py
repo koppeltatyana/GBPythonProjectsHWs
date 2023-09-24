@@ -1,4 +1,4 @@
-from HW8.data import WELCOME_STRING
+from data import WELCOME_STRING
 from data_writer import DataWriter
 from data_create import DataCreate
 from data_printer import DataPrinter

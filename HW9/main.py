@@ -10,7 +10,7 @@ def task_40(file_content: DataFrame):
 
     :param file_content: Экземпляр класса DataFrame (прочитанный файл)
     """
-    return file_content[df.population <= 500].median_house_value.median()
+    return file_content[df.population < 500].median_house_value.median()
 
 
 def task_42(file_content: DataFrame):
